@@ -1,0 +1,51 @@
+@mul: 3;
+
+body {
+  display: flex;
+  flex-flow: row nowrap;
+  align-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  background: #cacaca;
+}
+
+.container {
+  width: calc(@mul * 280px);
+  height: calc(@mul * 6 * 10px);
+  overflow: hidden;
+  border: 1px #000000 solid;
+}
+
+.wall {
+  flex: 1 1;
+  display: flex;
+  flex-flow: column nowrap;
+}
+
+.row {
+  display: flex;
+  flex-flow: row nowrap;
+  width: calc(@mul * 280px);
+  height: calc(@mul * 10px);
+}
+
+.row.odd {
+  margin-left: calc(@mul * 10px);
+}
+
+.tile {
+  width: calc(@mul * 20px);
+  height: calc(@mul * 10px);
+  background: transparent;
+  border: 1px #cacaca solid;
+  border-collapse: collapse;
+}
+
+.tile.y {
+  background: #faff39;
+}
+
+.tile.w {
+  background: white;
+}
